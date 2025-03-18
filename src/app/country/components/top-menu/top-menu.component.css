@@ -1,0 +1,64 @@
+:host {
+  display: block;
+}
+
+/* Resetear márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Estilos para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Título del navbar */
+.navbar-title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Contenedor de los botones */
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilo para los botones */
+.navbar-btn {
+  background-color: #215bfd;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+
+}
+
+/* Estilo para los botones al pasar el ratón */
+.navbar-btn:hover {
+  background-color: #555;
+}
+
+/* Imagen de los íconos */
+.navbar-btn img {
+  width: 20px;
+  height: 20px;
+}

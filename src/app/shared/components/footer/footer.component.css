@@ -1,0 +1,11 @@
+
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1; /* El contenido se expandirá para llenar el espacio disponible */
+  }
+  
