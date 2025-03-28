@@ -1,2 +1,2 @@
-<app-country-search-input (valorBusqueda)="busquedaValor($event)"></app-country-search-input>
-<app-country-list></app-country-list>
+<app-country-search-input (valorBusqueda)="busquedaValor($event)" placeholder="Buscar por capital "></app-country-search-input>
+<app-country-list [countries]="countries()"></app-country-list>

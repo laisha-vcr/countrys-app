@@ -1,6 +1,10 @@
-import {  Component } from '@angular/core';
+import {  Component, inject, signal } from '@angular/core';
 import { CountrySearchInputComponent } from '../../components/by-capital/country-search-input/country-search-input.component';
 import { CountryListComponent } from '../../components/by-capital/country-list/country-list.component';
+import { CountryService } from '../../services/country.service';
+import { RESTCountry } from '../../interfaces/rest.countries.interface';
+import { CountryMapper } from '../../mappers/country.mapper';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -9,7 +13,23 @@ import { CountryListComponent } from '../../components/by-capital/country-list/c
   imports: [CountrySearchInputComponent, CountryListComponent]
 })
 export class ByCapitalPageComponent   {
-    busquedaValor(value: string) {
-      console.log("papa",value);
+  countryService = inject(CountryService);
+
+  isLoading = signal(false);
+  isError = signal<string|null>(null)
+  countries = signal<Country[]>([]);
+
+    busquedaValor(query: string) {
+      if (this.isLoading()) return;
+      
+      this.isLoading.set(true)
+      this.isError.set(null);
+
+      this.countryService.searchByCapital(query)
+      .subscribe((countries)=>{
+        this.isLoading.set(false)
+        this.countries.set(countries);
+      });
+
     }
 }

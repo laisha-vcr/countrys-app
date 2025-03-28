@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-country-search-input',
@@ -19,4 +19,6 @@ export class CountrySearchInputComponent implements OnInit {
     console.log("hijo", value);
     this.valorBusqueda.emit(value); // Emisión del valor
   }
+
+  placeholder = input('Buscar')
 }
