@@ -25,10 +25,17 @@ export class ByCapitalPageComponent   {
       this.isLoading.set(true)
       this.isError.set(null);
 
-      this.countryService.searchByCapital(query)
-      .subscribe((countries)=>{
-        this.isLoading.set(false)
-        this.countries.set(countries);
+      this.countryService.searchByCapital(query).subscribe({
+        next: (countries) =>{//Si todo sale bien 
+          this.isLoading.set(false);
+          this.countries.set(countries);
+        },
+        error: (err) =>{//Como se esta manehando el error
+          console.log(err);
+          this.isLoading.set(false)
+          this.countries.set([])
+          this.isError.set(`No se encontró un país con la capital : ${query}`);
+        },
       });
 
     }
