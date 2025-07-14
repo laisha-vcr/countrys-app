@@ -3,13 +3,11 @@ import { CountryListComponent } from '../../components/by-capital/country-list/c
 import { CountrySearchInputComponent } from '../../components/by-capital/country-search-input/country-search-input.component';
 
 @Component({
-  selector: 'app-by-region-page',
-  templateUrl: './by-region-page.component.html',
-  styleUrls: ['./by-region-page.component.css'],
-  standalone: true,
-  imports: [CountryListComponent, CountrySearchInputComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  
+    selector: 'app-by-region-page',
+    templateUrl: './by-region-page.component.html',
+    styleUrls: ['./by-region-page.component.css'],
+    imports: [CountryListComponent, CountrySearchInputComponent],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ByRegionPageComponent implements OnInit {
 

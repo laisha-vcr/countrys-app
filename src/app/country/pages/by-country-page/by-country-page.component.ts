@@ -7,12 +7,11 @@ import { Country } from '../../interfaces/country.interface';
 import { of } from 'rxjs';
 
 @Component({
-  selector: 'app-by-country-page',
-  standalone: true,
-  imports: [CountryListComponent, CountrySearchInputComponent],
-  templateUrl: './by-country-page.component.html',
-  styleUrl: './by-country-page.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-by-country-page',
+    imports: [CountryListComponent, CountrySearchInputComponent],
+    templateUrl: './by-country-page.component.html',
+    styleUrl: './by-country-page.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ByCountryPageComponent {
 

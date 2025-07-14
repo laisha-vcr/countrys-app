@@ -10,10 +10,9 @@ import { CountryMapper } from '../../mappers/country.mapper';
 import { Country } from '../../interfaces/country.interface';
 
 @Component({
-  selector: 'app-by-capital-page',
-  templateUrl: './by-capital-page.component.html',
-  standalone: true,
-  imports: [CountrySearchInputComponent, CountryListComponent]
+    selector: 'app-by-capital-page',
+    templateUrl: './by-capital-page.component.html',
+    imports: [CountrySearchInputComponent, CountryListComponent]
 })
 export class ByCapitalPageComponent   {
   countryService = inject(CountryService);

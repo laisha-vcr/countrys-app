@@ -5,12 +5,11 @@ import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-country-list',
-  standalone: true,
-  imports: [DecimalPipe, RouterLink],
-  templateUrl: './country-list.component.html',
-  styleUrl: './country-list.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-country-list',
+    imports: [DecimalPipe, RouterLink],
+    templateUrl: './country-list.component.html',
+    styleUrl: './country-list.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CountryListComponent { 
   countries = input.required<Country[]>()
