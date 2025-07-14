@@ -1,2 +1,65 @@
-<app-country-search-input  placeholder="Buscar por pais"></app-country-search-input>
-<app-country-list [countries]="[]" />
+<app-country-search-input (valorBusqueda)="busquedaValor($event)"  placeholder="Buscar por pais"></app-country-search-input>
+@if (isError()){
+    <br>
+    <h3>{{ isError()}}</h3>
+} @else {
+    <app-country-list [countries]="countries()"></app-country-list>
+}
+<svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Cabeza -->
+  <g id="head" onclick="alert('Cabeza')" style="cursor: pointer;">
+    <circle cx="100" cy="30" r="20" fill="#E0E0E0" />
+  </g>
+
+  <!-- Cuello -->
+  <g id="neck" onclick="alert('Cuello')" style="cursor: pointer;">
+    <rect x="90" y="50" width="20" height="10" fill="#D0D0D0" />
+  </g>
+
+  <!-- Hombro izquierdo -->
+  <g id="left-shoulder" onclick="alert('Hombro izquierdo')" style="cursor: pointer;">
+    <circle cx="70" cy="60" r="10" fill="#C0C0C0" />
+  </g>
+
+  <!-- Hombro derecho -->
+  <g id="right-shoulder" onclick="alert('Hombro derecho')" style="cursor: pointer;">
+    <circle cx="130" cy="60" r="10" fill="#C0C0C0" />
+  </g>
+
+  <!-- Torso -->
+  <g id="torso" onclick="alert('Torso')" style="cursor: pointer;">
+    <rect x="80" y="70" width="40" height="100" fill="#A0A0A0" />
+  </g>
+
+  <!-- Muñeca izquierda -->
+  <g id="left-wrist" onclick="alert('Muñeca izquierda')" style="cursor: pointer;">
+    <circle cx="50" cy="170" r="8" fill="#B0B0B0" />
+  </g>
+
+  <!-- Muñeca derecha -->
+  <g id="right-wrist" onclick="alert('Muñeca derecha')" style="cursor: pointer;">
+    <circle cx="150" cy="170" r="8" fill="#B0B0B0" />
+  </g>
+
+  <!-- Pierna izquierda -->
+  <g id="left-leg" onclick="alert('Pierna izquierda')" style="cursor: pointer;">
+    <rect x="85" y="170" width="10" height="100" fill="#909090" />
+  </g>
+
+  <!-- Pierna derecha -->
+  <g id="right-leg" onclick="alert('Pierna derecha')" style="cursor: pointer;">
+    <rect x="105" y="170" width="10" height="100" fill="#909090" />
+  </g>
+
+  <!-- Pie izquierdo -->
+  <g id="left-foot" onclick="alert('Pie izquierdo')" style="cursor: pointer;">
+    <rect x="80" y="270" width="15" height="10" fill="#808080" />
+  </g>
+
+  <!-- Pie derecho -->
+  <g id="right-foot" onclick="alert('Pie derecho')" style="cursor: pointer;">
+    <rect x="105" y="270" width="15" height="10" fill="#808080" />
+  </g>
+
+</svg>
