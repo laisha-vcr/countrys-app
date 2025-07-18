@@ -9,9 +9,11 @@ import { RouterLink } from '@angular/router';
     imports: [DecimalPipe, RouterLink],
     templateUrl: './country-list.component.html',
     styleUrl: './country-list.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class CountryListComponent { 
+  
   countries = input.required<Country[]>()
   
 }

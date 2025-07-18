@@ -11,7 +11,8 @@ import { of } from 'rxjs';
     imports: [CountryListComponent, CountrySearchInputComponent],
     templateUrl: './by-country-page.component.html',
     styleUrl: './by-country-page.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class ByCountryPageComponent {
 
@@ -43,12 +44,5 @@ export class ByCountryPageComponent {
 
     }
 
-      selectedZone: string | null = null;
-
-  selectZone(zone: string) {
-    this.selectedZone = zone;
-    console.log('Zona seleccionada:', zone);
-    // Aquí puedes emitir un evento, guardar en el backend, etc.
-  }
  }
 
